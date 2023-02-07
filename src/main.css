@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  float: left;
+}
+
+header .logo a {
+  color: red;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul li {
+  list-style: none;
+  float: left;
+  margin-left: 2.5rem;
+}
+
+header nav ul li a {
+  color: white;
+  transition: 0.3s;
+}
+
+header nav ul li:hover a {
+  color: red;
+}
+
+.landing {
+  background-image: url('../assets/adventure.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.landing .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.landing:hover .overlay {
+  opacity: 1;
+}
+
+.landing .overlay .landing-caption {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
+  transition: 1s;
+}
+
+.landing .overlay .landing-caption button {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  font-size: 14px;
+  margin-top: 1rem;
+  border: 2px solid white;
+  transition: 0.3s;
+}
+
+.landing .overlay .landing-caption button:hover {
+  background-color: black;
+  border-color: black;
+}
+
+.landing:hover .overlay .landing-caption {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cards {
+  margin: 1rem 0;
+  height: 100vh;
+}
+
+.card {
+  width: 23.5%;
+  height: 400px;
+  position: relative;
+  float: left;
+  margin: 1rem 0 0 1rem;
+  border-radius: 10px;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.7);
+}
+
+.card .card-img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.725s;
+}
+
+.card:hover .overlay {
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
+.card .overlay .card-caption {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+}
+
+.card .overlay .card-caption p {
+  width: 80%;
+  margin: 10px auto 0;
+}
